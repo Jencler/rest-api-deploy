@@ -1,0 +1,38 @@
+### Devuelve todas las opeliculas
+
+GET http://localhost:1234/movies
+
+### Devuelve por el ID
+
+GET http://localhost:1234/movies/ccf36f2e-8566-47f7-912d-9f4647250bc7
+
+
+### deveulva por genero
+
+GET http://localhost:1234/movies?genre=Drama
+
+### Crear una Pelicula con metodo POST
+POST http://localhost:1234/movies
+Content-Type: application/json
+
+{
+  "title": "The Dark Knight 4",
+  "year": 2010,
+  "director": "Christopher Nolan",
+  "duration": 152,
+  "poster": "https://i.ebayimg.com/images/g/yokAAOSw8w1YARbm/s-l1200.jpg",
+  "genre": [
+    "Action",
+    "Drama"
+    ]
+}
+
+### Actulaizar la pelicula
+PATCH  http://localhost:1234/movies/dcdd0fad-a94c-4810-8acc-5f108d3b18c3
+Content-Type: application/json
+
+{
+  "id":"hola",
+  "title":"Hola mundo",
+  "year":1998
+}
